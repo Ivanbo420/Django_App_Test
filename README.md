@@ -19,26 +19,26 @@ git clone https://github.com/Ivanbo420/Django_App_Test.git
 ```bash
 pip install -r requirements.txt
 ```
-### **2. Change to the project's directory**
+### **3. Change to the project's directory**
 ```bash
 cd Django_App_Test
 ```
-### **3. Collect Static Files **
+### **4. Collect Static Files **
 ```bash
 python manage.py collectstatic --noinput
 ```
-### **4. Activate Virtual Environment (prepared for running the app)**
+### **5. Activate Virtual Environment (prepared for running the app)**
 ```bash
 \venv\Scripts\activate
 ```
-### **5. Change to the src directory**
+### **6. Change to the src directory**
 ```bash
 cd src
 ```
-### **6. Run the Django project**
+### **7. Run the Django project**
 ```bash
 python manage.py runserver
 ```
-### **7. Open the Web User Interface and test**
+### **8. Open the Web User Interface and test**
 - Go to http://127.0.0.1:8000 or http://localhost:8000
 - Test all the features once the Django server is running
