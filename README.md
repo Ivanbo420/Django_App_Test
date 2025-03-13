@@ -15,22 +15,30 @@ Django App Test Automax is a web application built with Django, aimed at sellers
 ```bash
 git clone https://github.com/Ivanbo420/Django_App_Test.git
 ```
+### **2. Install Dependencies **
+```bash
+pip install -r requirements.txt
+```
 ### **2. Change to the project's directory**
 ```bash
 cd Django_App_Test
 ```
-### **3. Activate Virtual Environment (prepared for running the app)**
+### **3. Collect Static Files **
+```bash
+python manage.py collectstatic --noinput
+```
+### **4. Activate Virtual Environment (prepared for running the app)**
 ```bash
 \venv\Scripts\activate
 ```
-### **4. Change to the src directory**
+### **5. Change to the src directory**
 ```bash
 cd src
 ```
-### **5. Run the Django project**
+### **6. Run the Django project**
 ```bash
 python manage.py runserver
 ```
-### **6. Open the Web User Interface and test**
+### **7. Open the Web User Interface and test**
 - Go to http://127.0.0.1:8000 or http://localhost:8000
 - Test all the features once the Django server is running
