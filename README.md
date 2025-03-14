@@ -1,7 +1,7 @@
 # Django App Test
 
 ## 📌 Project Description
-Django App Test Automax is a web application built with Django, aimed at sellers of used cars since it is an easy to use platform and the logic is pretty straight forward, as you:
+Django App Test Automax is a web application built with Django, aimed at sellers of used cars since it is an easy to use platform and the logic is pretty straight forward, as you can see:
 
 Create your account ---> Login ---> List the vehicle you want to sell or ask for information ---> Put your contact info. 
 
@@ -23,7 +23,7 @@ This project is easily adaptable to similar projects. It is mostly used as a tem
 git clone https://github.com/Ivanbo420/Django_App_Test.git
 ```
 
-### **2. Install Dependencies **
+### **2. Install Dependencies**
 **In case you don't have Python and Django installed, please execute the following commands (Windows Users - CMD):**
 ```bash
 winget install Python
@@ -60,7 +60,7 @@ python -m venv venv
 cd src
 ```
 
-### **6. Collect Static Files **
+### **6. Collect Static Files**
 ```bash
 python manage.py collectstatic --noinput
 ```
