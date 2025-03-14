@@ -3,7 +3,7 @@ import os
 import environ
 from django.contrib.messages import constants as messages
 
-#Initialize Environ
+# Initialize Environ
 env= environ.Env()
 env.read_env()
 
@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Login settings
+# Login settings
 LOGIN_REDIRECT_URL= '/home/'
 LOGIN_URL= '/login/'
 
@@ -142,4 +142,13 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Crispy Forms Settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailgun.org' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
