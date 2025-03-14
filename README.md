@@ -38,15 +38,12 @@ sudo apt install python3 python3-pip -y
 ```bash
 pip3 install django
 ```
-**Install Software Requirements**
-```bash
-pip install -r requirements.txt
-```
 
 ### **3. Change to the project's directory**
 ```bash
 cd Django_App_Test
 ```
+
 ### **4. Create and Activate Virtual Environment for running the app**
 ```bash
 python -m venv venv
@@ -55,21 +52,26 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-### **5. Change to the src directory**
+### **5. Install Specific Requirements for the Project**
+```bash
+pip install -r requirements.txt
+```
+
+### **6. Change to the src directory**
 ```bash
 cd src
 ```
 
-### **6. Collect Static Files**
+### **7. Collect Static Files**
 ```bash
 python manage.py collectstatic --noinput
 ```
 
-### **7. Run the Django project**
+### **8. Run the Django project**
 ```bash
 python manage.py runserver
 ```
 
-### **8. Open the Web User Interface and test**
+### **9. Open the Web User Interface and test**
 - Go to http://127.0.0.1:8000 or http://localhost:8000
 - Test all the features once the Django server is running

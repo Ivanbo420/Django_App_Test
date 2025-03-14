@@ -19,6 +19,11 @@ from ..util import u
 # limitations under the License.
 
 data = {
+ '553299114':{'en': 'TIM'},
+ '553299115':{'en': 'TIM'},
+ '553299116':{'en': 'TIM'},
+ '553299117':{'en': 'TIM'},
+ '553299118':{'en': 'TIM'},
  '553299119':{'en': 'TIM'},
  '553299121':{'en': 'TIM'},
  '553299122':{'en': 'TIM'},
@@ -10014,9 +10019,4 @@ data = {
  '5733321':{'en': 'Tigo'},
  '5733330':{'en': 'GoMobile'},
  '5733332':{'en': 'EZTALK Mobile'},
- '5733333':{'en': 'EZTALK Mobile'},
- '5733334':{'en': 'EZTALK Mobile'},
- '5733335':{'en': 'EZTALK Mobile'},
- '5733340':{'en': 'Comunicaciones Dime'},
- '5733341':{'en': 'Comunicaciones Dime'},
 }
