@@ -1,13 +1,20 @@
 # Django App Test
 
 ## 📌 Project Description
-Django App Test Automax is a web application built with Django, aimed at sellers of used cars, but easily adaptable to similar projects. It is mostly used as a template.
+Django App Test Automax is a web application built with Django, aimed at sellers of used cars since it is an easy to use platform and the logic is pretty straight forward, as you:
+
+Create your account ---> Login ---> List the vehicle you want to sell or ask for information ---> Put your contact info. 
+
+This project is easily adaptable to similar projects. It is mostly used as a template since it's very adaptable and friendly.
 
 ## 🛠️ Features
 - User authentication: login, logout, register
-- CRUD operations for the internal models, which can be edited]
-- Responsive frontend with Bootstrap 
+- CRUD operations for the internal models, which can be edited
+- Responsive frontend with Bootstrap
 - Database integration (SQLite)
+- Reports implemented
+- Minimalist version deployed with Docker
+- Friendly, reliable and easy to maintain
 
 ## 🚀 Installation Guide
 
@@ -15,30 +22,54 @@ Django App Test Automax is a web application built with Django, aimed at sellers
 ```bash
 git clone https://github.com/Ivanbo420/Django_App_Test.git
 ```
+
 ### **2. Install Dependencies **
+**In case you don't have Python and Django installed, please execute the following commands (Windows Users - CMD):**
+```bash
+winget install Python
+```
+```bash
+pip install django
+```
+**In case you don't have Python and Django installed, please execute the following commands (Debian Users - Terminal):**
+```bash
+sudo apt install python3 python3-pip -y
+```
+```bash
+pip3 install django
+```
+**Install Software Requirements**
 ```bash
 pip install -r requirements.txt
 ```
+
 ### **3. Change to the project's directory**
 ```bash
 cd Django_App_Test
 ```
-### **4. Collect Static Files **
+### **4. Create and Activate Virtual Environment for running the app**
 ```bash
-python manage.py collectstatic --noinput
+python -m venv venv
 ```
-### **5. Activate Virtual Environment (prepared for running the app)**
 ```bash
-\venv\Scripts\activate
+.\venv\Scripts\activate
 ```
-### **6. Change to the src directory**
+
+### **5. Change to the src directory**
 ```bash
 cd src
 ```
+
+### **6. Collect Static Files **
+```bash
+python manage.py collectstatic --noinput
+```
+
 ### **7. Run the Django project**
 ```bash
 python manage.py runserver
 ```
+
 ### **8. Open the Web User Interface and test**
 - Go to http://127.0.0.1:8000 or http://localhost:8000
 - Test all the features once the Django server is running
