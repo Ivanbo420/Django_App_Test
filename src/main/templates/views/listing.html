@@ -64,7 +64,7 @@
                                 <li>{{listing.location.city}}, {{listing.location.department}}</li>
                             </ul>
                             <button class="w-100 btn btn-lg btn-outline-primary my-3">{{formatted_phone_number}}</button>
-                            <button class="w-100 btn btn-lg btn-outline-primary my-3">Send Email</button>
+                            <button id="send_email" class="w-100 btn btn-lg btn-outline-primary my-3">Send Email</button>
                         </div>
                     </div>
                 </div>
@@ -82,4 +82,20 @@
         </div>
     </div>
 </main>
+<script>
+    $("#send_email").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "{% url 'inquire_listing' id=listing.id %}",
+            data: {'csrfmiddlewaretoken':'{{csrf_token}}'},
+            dataType: "json",
+            success: function(r){
+                alert("Email sent successfully!.")
+            },
+            error: function(rs, e){
+                alert(rs.info)
+            }
+        })
+    });
+</script>
 {% endblock %}

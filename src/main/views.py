@@ -6,6 +6,7 @@ from .models import Listing, LikedListing
 from .forms import ListingForm
 from users.forms import LocationForm
 from django.contrib import messages
+from django.core.mail import send_mail
 from .filters import ListingFilter
 import uuid
 from django.shortcuts import get_object_or_404
@@ -124,3 +125,15 @@ def like_listing_view(request, id):
     else:
         liked_listing.save()
     return JsonResponse({'is_liked':created})
+
+@login_required
+def inquire_listing_view(request, id):
+    listing= get_object_or_404(Listing, id=id)
+    try:
+        email_subject= f'{request.user.username} is interested in {listing.model} listed in Automax'
+        email_message= f'Hi {listing.seller.user.username}, {request.user.username} '
+        send_mail(email_subject, email_message, 'noreply@automax.com', [listing.seller.user.email, ], fail_silently=True)
+        return JsonResponse({"success":True})
+    except Exception as e:
+        print(e)
+        return JsonResponse({"success":False, "info":e})
